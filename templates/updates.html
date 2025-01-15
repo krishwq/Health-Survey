@@ -1,0 +1,50 @@
+
+{% extends 'index.html' %}
+{% block modal %}
+<div class="modal fade show " id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" role="dialog" style="display: block;">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-dark text-white">
+        <div class="modal-header">
+          <h5 class="modal-title fs-5" id="staticBackdropLabel">**You can only change personal details**</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="document.getElementById('staticBackdrop').style.display = 'none';"
+          "></button>
+        </div>
+        <div class="modal-body">
+          <!-- Form inside the modal -->
+          <form id="updateForm" class="row " action="/update/{{health_edit.id}}" method="POST">
+  
+            <div class="col-md-6">
+              <label for="updateFName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="updateFName" name="first_name" value={{health_edit.first_name}} placeholder="First Name">
+            </div>
+  
+            <div class="col-md-6">
+              <label for="updateLName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="updateLName" name="last_name" value={{health_edit.last_name}} placeholder="Last Name">
+            </div>
+  
+            <div class="mb-3">
+              <label for="updateDob" class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" id="updateDob" name="dob" value={{health_edit.dob}} >
+            </div>
+  
+            <div class="mb-3">
+              <label for="updateGender" class="form-label">Gender</label>
+              <input type="text" class="form-control" id="updateGender" name="gender" value={{health_edit.gender}} placeholder="Enter your gender">
+            </div>
+  
+            <div class="mb-3">
+              <label for="updateCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="updateCity" name="city" value={{health_edit.city}} placeholder="Enter your city">
+            </div>
+  
+            <!-- Add other fields as necessary -->
+  <div class="mb-1 mt-3">
+            <button type="submit" class="btn btn-primary ">Save Changes</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endblock modal %}
+ 

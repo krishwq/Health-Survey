@@ -1,0 +1,32 @@
+h2,h4{
+    text-align: center;
+    margin:10px 0px !important;
+}
+.container{
+    margin-bottom: 30px;
+}
+form,table{
+    margin-top: 15px !important;
+}
+.btn{
+   width: 100%;
+}
+.action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table {
+    text-align: center;
+}
+.tablecont{
+    overflow-x: auto;
+}
+.btn-close{
+    filter: invert(1);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
