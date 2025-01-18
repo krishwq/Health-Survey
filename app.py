@@ -30,8 +30,8 @@ class Health(db.Model):
         return f'{self.id}' 
 
 # Create the tables defined by your models in the database
-with app.app_context():
-    db.create_all()  # Creates the tables defined by your models
+# with app.app_context():
+#     db.create_all()  # Creates the tables defined by your models
 
 # route for home page
 @app.route('/',methods=['GET','POST'])   
